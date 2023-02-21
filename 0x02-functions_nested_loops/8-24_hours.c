@@ -9,7 +9,7 @@ void jack_bauer(void)
 
 	while (start <= startend)
 	{
-		while (secondstart < = end)
+		while (secondstart <= end)
 		{
 			_putchar(start < 9 ? 0 + '0' : start / 10 + '0');
 			_putchar(start < 9 ? start + '0' : start % 10 + '0');
