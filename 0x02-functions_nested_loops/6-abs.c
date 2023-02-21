@@ -2,7 +2,7 @@
 /**
  * _abs - prints the absolute value
  * @c: the argument
- * Return: 0 sucess
+ * Return: c  sucess
  */
 int _abs(int c)
 {
@@ -15,6 +15,6 @@ int _abs(int c)
 		c = c;
 	}
 
-	return (0);
+	return (c);
 }
 
