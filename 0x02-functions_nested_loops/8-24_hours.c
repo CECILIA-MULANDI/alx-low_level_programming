@@ -19,6 +19,7 @@ void jack_bauer(void)
 			_putchar('\n');
 			secondstart++;
 		}
+		secondstart = 0;
 		start++;
 	}
 }
