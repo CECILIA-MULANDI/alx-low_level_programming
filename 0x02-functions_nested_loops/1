@@ -1,6 +1,0 @@
-#include "main.h"
-/**
-*main - prints the alphabet
-*/
-int main(void)
-{
