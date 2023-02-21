@@ -16,9 +16,9 @@ void jack_bauer(void)
 			_putchar(':');
 			_putchar(secondstart < 9 ? 0 + '0' : secondstart / 10 + '0');
 			_putchar(secondstart < 9 ? secondstart + '0' : secondstart % 10 + '0');
+			_putchar('\n');
 			secondstart++;
 		}
-		secondstart = 0;
 		start++;
 	}
 }
