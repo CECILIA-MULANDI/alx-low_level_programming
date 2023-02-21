@@ -10,6 +10,11 @@ int _abs(int c)
 	{
 		c *= -1;
 	}
+	else
+	{
+		c = c;
+	}
+
 	return (0);
 }
 
