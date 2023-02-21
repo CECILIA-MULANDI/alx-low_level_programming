@@ -4,7 +4,7 @@
  */
 void print_alphabet_x10(void)
 {
-	int counter = 10;
+	int counter = 0;
 
 	char lower;
 
@@ -15,5 +15,6 @@ void print_alphabet_x10(void)
 			_putchar(lower);
 		}
 		_putchar('\n');
+		counter++;
 	}
 }
