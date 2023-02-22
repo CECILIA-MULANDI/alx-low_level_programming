@@ -1,4 +1,4 @@
-include "main.h"
+#include "main.h"
 /**
  *print_times_table - gives  the n mult table
 *@n: argument given
