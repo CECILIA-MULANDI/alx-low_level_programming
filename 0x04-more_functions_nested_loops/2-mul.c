@@ -1,15 +1,15 @@
 #include "main.h"
 /**
- * mult - multiplies two nos
+ * mul - multiplies two nos
  * @a:argument
  * @b:argument
- * Return:
+ * Return: the product
  */
 int mul(int a, int b)
 {
 	int product;
 
-	product = a*b;
+	product = a * b;
 
 	return (product);
 }
