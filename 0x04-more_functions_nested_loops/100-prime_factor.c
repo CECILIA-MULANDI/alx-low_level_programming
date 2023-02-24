@@ -6,7 +6,7 @@
  */
 void prime_factors(long num)
 {
-	long divisor;
+	long divisor = 2;
 
 	while (divisor != num)
 	{
