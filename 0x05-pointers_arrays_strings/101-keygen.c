@@ -37,7 +37,7 @@ int main(void)
 		{
 			if (password[i] >= first)
 			{
-				password[i] = password - first;
+				password[i] = password[i] - first;
 				break;
 			}
 		}
@@ -45,7 +45,7 @@ int main(void)
 		{
 			if (password[i] >= (33 + second))
 			{
-				password[i] = password - second;
+				password[i] = password[i] - second;
 				break;
 			}
 		}
