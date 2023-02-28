@@ -5,7 +5,7 @@
  * main - randomizes password
  * Return: sucess 0
  */
-intmain(void)
+int main(void)
 {
 	char password[100];
 
@@ -31,7 +31,7 @@ intmain(void)
 
 		if ((sum - 2772) % 2 != 0)
 		{
-			first++
+			first++;
 		}
 		for (i = 0; password[i]; i++)
 		{
