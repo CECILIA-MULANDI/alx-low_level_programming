@@ -7,7 +7,7 @@
  */
 int main(void)
 {
-	char password[100];
+	char password[84];
 
 	int i  = 0;
 
