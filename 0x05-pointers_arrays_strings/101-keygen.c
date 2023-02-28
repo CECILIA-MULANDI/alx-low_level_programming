@@ -57,7 +57,7 @@ void PasswordGeneration(int n)
 int main()
 {
     
-    int n = 8;
+    int n = 10;
   
     
     PasswordGeneration(n);
