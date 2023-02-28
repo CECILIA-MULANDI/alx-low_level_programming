@@ -1,67 +1,55 @@
 #include <stdio.h>
-#include <stdlib.h>
 #include <time.h>
-#include <math.h>
+#include <stdlib.h>
 /**
- * PasswordGeneration : generates a password
- * @n: parameter
- * Returns: void
+ * main - randomizes password
+ * Return: sucess 0
  */
-
-void PasswordGeneration(int n)
+intmain(void)
 {
-    int i = 0;
-    
-  
-    char numbers[] = "0123456789";
-    
-    char capitalLetters[] = "ABCDEFGHIJKLMNOQPRSTUYWVZX";
-    
-    char smallLetters[] = "abcdefghijklmnoqprstuvwyzx";
-  
-    char symbols[] = "!@#$^&*?";
-  
- 
-    char password[n];
-    int randomChar = 0;
+	char password[100];
 
-    srand((unsigned int)(time(NULL))); 
-    
-    randomChar = rand() % 4;
-  
-    for (i = 0; i < n; i++) {
-  
-        if (randomChar == 1) {
-            password[i] = numbers[rand() % 10];
-            randomChar = rand() % 4;
-            printf("%c", password[i]);
-        }
-        else if (randomChar == 2) {
-            password[i] = symbols[rand() % 8];
-            randomChar = rand() % 4;
-            printf("%c", password[i]);
-        }
-        else if (randomChar == 3) {
-            password[i] = capitalLetters[rand() % 26];
-            randomChar = rand() % 4;
-            printf("%c", password[i]);
-        }
-        else {
-            password[i] = smallLetters[rand() % 26];
-            randomChar = rand() % 4;
-            printf("%c", password[i]);
-        }
-    }
+	int i  = 0;
+
+	int sum = 0;
+
+	int first;
+
+	int second;
+
+	while (sum < 2772)
+	{
+		password[i] = 33 + rand()% 94;
+		sum = sum + password[i++];
+	}
+	password[i] = '\0';
+
+	if (sum != 2772)
+	{
+		first = (sum -2772) / 2;
+		second = (sum - 2772) / 2;
+
+		if ((sum - 2772) % 2 != 0)
+		{
+			first++
+		}
+		for (i = 0; password[i]; i++)
+		{
+			if (password[i] >= first)
+			{
+				password[i] = password - first;
+				break;
+			}
+		}
+		for (i = 0; password[i]; i++)
+		{
+			if (password[i] >= (33 + second))
+			{
+				password[i] = password - second;
+				break;
+			}
+		}
+	}
+	printf("%s",password);
+	return (0);
 }
-
-int main()
-{
-    
-    int n = 10;
-  
-    
-    PasswordGeneration(n);
-  
-    return 0;
-}
-
