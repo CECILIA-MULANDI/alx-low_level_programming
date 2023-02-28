@@ -12,9 +12,6 @@ void PasswordGeneration(int n)
 {
     int i = 0;
     
-    int randomChar = 0;
- 
-    srand((unsigned int)(time(NULL)));
   
     char numbers[] = "0123456789";
     
@@ -26,7 +23,9 @@ void PasswordGeneration(int n)
   
  
     char password[n];
-  
+    int randomChar = 0;
+
+    srand((unsigned int)(time(NULL))); 
     
     randomChar = rand() % 4;
   
