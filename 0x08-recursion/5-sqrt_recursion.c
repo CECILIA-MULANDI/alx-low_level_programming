@@ -1,9 +1,13 @@
 #include "main.h"
 /**
- *
- *
- *
- *
+ *_sqrt_recursion- function to get sqrt
+ *@n:argument
+ *Return: int type
+ */
+
+/**
+ *@low:argument
+ *@high:argument
  */
 int sqrt_helper(int n, int low, int high);
 int _sqrt_recursion(int n)
@@ -16,8 +20,16 @@ int _sqrt_recursion(int n)
 	{
 		return (n);
 	}
-	return sqrt_helper(n, 1, n);
+	return (sqrt_helper(n, 1, n));
 }
+/**
+ * sqrt_helper - does binary search to hep find the midpoint
+ * @n:argument
+ * @low:argument
+ * @high:argument
+ * @high: argument used
+ *Return:int
+ */
 int sqrt_helper(int n, int low, int high)
 {
 	int mid;
@@ -45,7 +57,7 @@ int sqrt_helper(int n, int low, int high)
 	}
 	else
 	{
-		return sqrt_helper(n, low, mid - 1);
+		return (sqrt_helper(n, low, mid - 1));
 	}
 }
 
