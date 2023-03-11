@@ -6,9 +6,9 @@
  * @argv:argument
  * Return:int
  */
-int main(int argc, int *argv[])
+int main(int argc __attribute__((unused)), char *argv[])
 {
-	printf("%s\n", argv[argc * 0]);
+	printf("%s\n", *argv);
 
 	return (0);
 }
