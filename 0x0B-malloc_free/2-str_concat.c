@@ -12,7 +12,7 @@ int get_len(char *s)
 
 	for (i = 0; s[i] != '\0'; i++)
 		;
-	return (i+1);
+	return (i + 1);
 }
 /**
  * str_concat - concatenates two stringss
@@ -42,7 +42,7 @@ char *str_concat(char *s1, char *s2)
 	if (ptr == NULL)
 		return (NULL);
 	for (i = 0; s1[i] != '\0'; i++)
-	       ptr[i] = s1[i];	
+		ptr[i] = s1[i];
 	for (j = 0; s2[j] != '\0'; j++, i++)
 		ptr[i] = s2[j];
 	ptr[i] = '\0';
