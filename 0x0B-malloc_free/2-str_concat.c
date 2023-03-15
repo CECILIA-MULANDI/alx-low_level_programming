@@ -10,7 +10,7 @@ int get_len(char *s)
 {
 	int i;
 
-	for (i = 0; str[i] != '\0'; i++)
+	for (i = 0; s[i] != '\0'; i++)
 		;
 	return (i+1);
 }
@@ -27,14 +27,14 @@ char *str_concat(char *s1, char *s2)
 	int s2_size;
 
 	int i;
-	int *ptr;
+	char *ptr;
 
 	int j;
 
 	if (s1 == NULL)
 		s1 = "";
 	if (s2 == NULL)
-		S2 = "";
+		s2 = "";
 	s1_size = get_len(s1);
 	s2_size = get_len(s2);
 
