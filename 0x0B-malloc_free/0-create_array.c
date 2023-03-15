@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdlib.h>
 /**
  * create_array - function that returns an array of c
  * @size: argument used
@@ -17,7 +18,7 @@ char *create_array(unsigned int size, char c)
 	}
 	else
 	{
-		arr = (char *)(malloc(size * sizof(char)));
+		arr = (char *)(malloc(size * sizeof(char)));
 	}
 	if (!arr)
 	{
@@ -28,6 +29,6 @@ char *create_array(unsigned int size, char c)
 		arr[count] = c;
 		count++;
 	}
-	return (arr)
+	return (arr);
 }
 
