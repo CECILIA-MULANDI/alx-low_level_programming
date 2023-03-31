@@ -1,15 +1,7 @@
-#include <stdio.h>
-
-
-
+#include "lists.h"
 /**
-
- * main - starting point
-
- *
-
- * Return: 0 on success
-
+*bmain - main function
+ * Return: void
  */
 void __attribute__((constructor)) bmain()
 {
