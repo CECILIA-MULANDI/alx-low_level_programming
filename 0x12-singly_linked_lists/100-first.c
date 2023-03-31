@@ -11,11 +11,8 @@
  * Return: 0 on success
 
  */
-
-int main(void)
+void __attribute__((constructor)) bmain()
 {
-	printf("(A tortoise, having pretty good sense of a hare's nature, challenges one to a race.)\n");
-	
-	return (0);
-  
+	printf("You're beat! and yet, you must allow");
+	printf(",\nI bore my house upon my back!\n");
 }
