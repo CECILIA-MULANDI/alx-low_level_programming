@@ -1,18 +1,20 @@
 #include "lists.h"
 /**
- *
- *
- *
+ *pop_listint- function to delete
+ *@head:pointer to pointer
+ *Return: data
  */
 int pop_listint(listint_t **head)
 {
-	if (head == NULL)
-		return (0);
 	listint_t *tempPointer;
-	
-	*tempPointer = *head;
-	temPointer = head->next;
-	free(head);
+	int data;
 
-	return (*tempPointer);
+	if (head == NULL || *head == NULL)
+		return (0);
+	data = (*head)->n;
+	tempPointer = (*head)->next;
+	free(*head);
+	(*head) = tempPointer;
+
+	return (data);
 }
