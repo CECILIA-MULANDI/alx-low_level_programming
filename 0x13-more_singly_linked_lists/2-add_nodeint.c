@@ -1,9 +1,9 @@
 #include "lists.h"
 /**
- * add_nodeint - a fun that return head after adding a node
+ *add_nodeint - a fun that return head after adding a node
  * @n:argument (data)
  * @head:argument pointer to head
- * Returns:head
+ * Return:head
  */
 
 
@@ -15,16 +15,13 @@ listint_t *add_nodeint(listint_t **head, const int n)
 
 	if (newnode == NULL)
 		return (NULL);
+	if (head == NULL)
+		*head = newnode;
 	else
 	{
-		if (head == NULL)
-			*head = newnode;
-		else
-		{
-			newnode->n = n;
-			newnode->next = *head;
-			*head = newnode;
-		}
-		return (*head);
+		newnode->n = n;
+		newnode->next = *head;
+		*head = newnode;
 	}
+	return (*head);
 }
