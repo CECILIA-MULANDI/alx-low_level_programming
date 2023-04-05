@@ -8,13 +8,13 @@
  */
 void free_listint(listint_t *head)
 {
-	listint_t *prevNode;
+	listint_t *nextNode;
 
 	if (head != NULL)
 	{
-		prevNode = head;
-		head = head->next;
-		free(prevNode);
+		nextNode = head->next;
+		free(head);
+		head = nextNode;
 	}
 }
 
