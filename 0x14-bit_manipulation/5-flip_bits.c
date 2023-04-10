@@ -16,7 +16,7 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 
 	for (i = 0; i < 64; i++)
 	{
-		keepCount += (theDiff >> i ) & 1;
+		keepCount += (theDiff >> i) & 1;
 	}
 
 	return (keepCount);
