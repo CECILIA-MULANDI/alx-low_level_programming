@@ -10,13 +10,14 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
 	unsigned int keepCount = 0;
 
+	int i;
+
 	unsigned long  int  theDiff = n ^ m;
 
-	while (theDiff != 0)
+	for (i = 0; i < 64; i++)
 	{
-		keepCount += (theDiff & 1);
-		keepCount >>= 1;
+		keepCount += (theDiff >> i ) & 1;
 	}
+
 	return (keepCount);
 }
-
