@@ -1,5 +1,5 @@
 #include "main.h"
-
+#include <string.h>
 /**
  *create_file - creates a file
  *@filename: pointer to file
@@ -8,7 +8,7 @@
  */
 int create_file(const char *filename, char *text_content)
 {
-	int newfile, filewrite, j = 0;
+	int newfile, filewrite;
 
 	if (filename == NULL)
 		return (-1);
@@ -19,15 +19,13 @@ int create_file(const char *filename, char *text_content)
 
 	if (text_content != NULL)
 	{
-		while (text_content[j])
-			j++;
-		filewrite = write(newfile, text_content, j);
-
+		filewrite = write(newfile, text_content, strlen(text_content));
 		if (filewrite == -1)
 		{
 			close(newfile);
 			return (-1);
 		}
+
 	}
 
 	close(newfile);
