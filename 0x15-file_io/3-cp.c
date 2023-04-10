@@ -43,7 +43,7 @@ int main(int argc, char *argv[])
 
 	if (file_from == -1)
 	{
-		print_error("Error: Can't read from the file");
+		print_error("Error: Can't read from  file");
 		exit(98);
 	}
 
